@@ -1,0 +1,40 @@
+BusyUART = returns the UART transmissions status
+
+CloseUART = turns off the UART module
+
+ConfigIntUART = configures the UART interrupts
+
+DataRdyUART = returns the UART receive buffer status
+
+OpenUART = configures the UART module
+
+ReadUART = returns the content of UART receive buffer
+
+WriteUART = writes data to be transmitted into transmit buffer register
+
+getUART = reads a string of data of specified length and stores it into
+	the buffer location specified
+
+putsUART = writes a string of data to be transmitted into the UART transmit buffer
+
+UARTGetErrors = retrieves bitmap of various error values
+
+UARTClearErrors = clears all error flags
+
+EnableIntURX = enables the UART receive interrupt
+
+EnableIntUTX = enables the UART transmit interrupt
+
+DisableIntURX = disables the UART receive interrupt
+
+DisableIntUTX = disables the UART transmit interrupt
+
+SetPriorityIntU = sets priority for UART channel
+
+SetSubPriorityInt = sets the sub priority for UART channel
+
+UARTSendBreak = initiates break sequence on UART
+
+UARTEnableAutoAddr = enables the automatic address matching mode of UART
+
+ 

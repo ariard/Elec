@@ -1,0 +1,48 @@
+CloseI2C = disable i2c module and clears master and slave interrupt enable and flags
+
+AcklIC2 = generate an i2c bus acknowledge condition
+
+DataRdyI2C = return true if data in RCV register
+
+IdlelI2C = generates Wait condition until I2C bus is Idle
+
+MastergetsI2C = reads predeterminted data string lenght from I2C bus
+
+MasterputsI2C = used to write out a data string to the I2C bus
+
+MasterreadI2C = used to read a single byte from I2C bus
+
+MasterwriteI2C = used to write out a single data byte to the I2C device
+
+NotAcklI2C = genereates I2C bus Not Acknowledge condition
+
+OpenI2C = configures I2C module
+
+RestartI2C = generates I2C bus restart condition
+
+SlavegetsI2C = reads pre-determined data string length from I2C bus
+
+SlaveputsI2C = used to write out a data string to the I2C bus
+
+SlavereadI2C = used to read a single byte from the I2C bus
+
+SlavewriteI2C = used to write out a singlye byte to the I2C bus
+
+StartI2C = generates a I2C bus start condition
+
+StopI2C = generates I2C bus stop condition
+
+EnableIntMI2C = enables master I2C interrupt
+
+DisableIntMI2C = disable master I2C interrupt
+
+EnableIntBI2C = enables the bus collision I2C interrupt
+
+DisableIntBI2C = disables the bus collision I2C interrupt
+
+SetPriorityIntI2C = sets priority for I2C interrupt
+
+EnableIntSI2C = enables the slave I2C interrupt
+
+DisableIntSI2C = disables the slave I2C interrupt
+
