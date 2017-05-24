@@ -38,3 +38,19 @@ UARTSendBreak = initiates break sequence on UART
 UARTEnableAutoAddr = enables the automatic address matching mode of UART
 
  
+
+//To-Do
+
+-OpenUART
+-CloseUART
+-ConfigIntUART
+-DataRdyUART
+-ReadUART
+-WriteUART
+
+-EnableIntURX
+-EnalbeIntUTX
+-DisableIntURX
+-DisableIntUTX
+-UARTSendBreak
+
