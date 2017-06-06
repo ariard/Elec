@@ -4,8 +4,8 @@ static t_input		g_input[] =
 {
 	{UART_RD, &read_uart},
 	{I2C_RD, &read_i2c},
-	{-1, NULL},
-}	
+	{END_INT, NULL},
+};
 
 static	t_module	g_module[] =
 {
@@ -15,9 +15,8 @@ static	t_module	g_module[] =
 	{SENSOR_LEVEL, &sensor_level},
 	{SENSOR_POWER, &sensor_power},
 	{LED, &led},
-	{-1, NULL},
-}
-
+	{END_ROBIN, NULL},
+};
 
 int			main(void)
 {
@@ -43,18 +42,18 @@ int			main(void)
 	// sensor calibration	
 	
 
-	while (1);
+	while (1)
 	{
 		while (intqueue[i] != EMPTY)
 		{
 			j = -1;
-			while (g_input[++j].intgflag != -1)
+			while (g_input[++j].intflag != END_INT)
 				if (intqueue[i] == g_input[j].intflag)
-					robin = g_input[j].read;
+					robin = g_input[j].read();
 			intqueue[i--] = 0;
 			j = -1;
-			while (g_module[++j].robinstate != -1)
-				if (robinstate == g_module[j].robinstate)
+			while (g_module[++j].robinstate != END_ROBIN)
+				if (robin == g_module[j].robinstate)
 					g_module[j].module();
 		}
 		// going to sleep
